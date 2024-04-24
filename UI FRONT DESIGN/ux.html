@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Background Image</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=LEMON+MILK&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+		body {
+			background: url('./img/bg.png') ;
+			background-size: cover;
+		}
+        h1 {
+            align-items: center;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 85px;
+            font-family: 'Nexa', sans-serif;
+            position: relative; /* Enable positioning for hover effect */
+
+        }
+        .first-text {
+            background: radial-gradient(circle, #6b6b6b, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .second-text {
+            background: linear-gradient(to bottom right, #FF18A4, #FAA21D);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo {
+            /* Set background */
+            background-image: url('./img/logo.png');
+            background-size: cover; /* Adjusts the background image size */
+            background-position: center; /* Centers the background image */
+            width: 230px; /* Set width */
+            height: 170px; /* Set height */
+            position: relative; /* Enable positioning for hover effect */
+            transition: transform 0.3s ease; /* Add transition effect */
+        }
+
+        .logo:hover {
+            transform: scale(0.9); /* Scale up the logo on hover */
+        }
+
+        .nav {
+            position: absolute;
+            top: 55px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 20px;
+            background-color: transparent;
+            color: #5e5e5e;
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Mustica Pro', sans-serif;
+            font-size: 18px;
+        }
+
+        .nav .ab {
+            color: #ffffff77;
+            text-decoration: none;
+            margin: 0 30px;/*gap between each other*/
+        }
+        .anim{
+            transition: transform 0.2s ease-in-out;
+        }
+        .anim:hover {
+            color: #ffae17ac ;
+            transform: scale(0.9);
+        }
+
+        .nav a:not(:first-child) {
+            margin-left: 40px;
+        }
+        
+        .custom-img {
+            width: 600px; /* Set the width */
+            height: auto; /* Maintain aspect ratio */
+            position: relative; /* Enable positioning */
+            top: -100px; /* Adjust the top position */
+            left: 440px; /* Adjust the left position */
+            transition: transform 0.3s ease; /* Add transition effect */
+        }
+        .custom-img img{
+            position: relative;
+            width: 600px;
+        }
+        .custom-img:hover {
+            transform: scale(0.95); /* Scale up the image on hover */
+        }       
+        .transparent-box {
+            width: 240px; /* set the width */
+            height: auto; /* set the height */
+            position: absolute; /* position the image absolutely */
+            top: 430px; /* adjust the top position */
+            left: 15%; /* adjust the left position */
+            transform: translateX(-50%); /* center the image horizontally */
+        }
+        .transparent-box2 {
+            width: 240px; /* set the width */
+            height: auto; /* set the height */
+            position: absolute; /* position the image absolutely */
+            top: 630px; /* adjust the top position */
+            left: 18%; /* adjust the left position */
+            transform: translateX(-50%) rotate(180deg); /* center the image horizontally */
+        }
+        .register{
+            position: absolute;
+            top: 50px;
+            left: 85%;
+            padding: 20px;
+            color: #ffffff;
+            font-family: 'Mustica Pro', sans-serif;
+            font-size: 17px;
+            transition: transform 0.3s ease; /* add a transition effect to the scale change */
+        }
+        .register:hover {
+            transform: scale(0.95);
+        }
+
+        .icon {
+            width: 22px; /* set the width of the image */
+            height: auto; /* maintain aspect ratio */
+            margin-left: 5px; /* add some space between the text and the image */
+        }
+
+        .btnuptext {
+            position: absolute;
+            bottom: 170px;
+            right: 140px;
+            color: #aaaaaa;
+            font-size: 25px;
+            font-family: 'Mustica Pro', sans-serif;
+            text-align: left;
+            line-height: 2;
+            transition: transform 0.3s ease;
+        }
+        .btnuptext:hover {
+            transform: scale(0.95);
+        }
+        .get-started {
+            width: 200px;
+            height: 50px;
+            /* Font family and size */
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            /* Positioning */
+            position: absolute;
+            top: 88%;
+            left: 78%;
+            transform: translate(-50%, -50%);
+            /* Button styling */
+            padding: 10px 20px;
+            background-color: #1A1A1A; 
+            color: white;
+            border: none;
+            border-radius: 30px; /* Border radius */
+            cursor: pointer;
+            /* Transition for hover effect */
+            transition: background-color 0.3s;
+            z-index: 1; /* Behind the button */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .stroke-layer {
+            position: absolute;
+            top: 88%;
+            left: 78%;
+            transform: translate(-50%, -50%);
+            width: 206px; /* Width slightly larger than the button */
+            height: 56px; /* Height slightly larger than the button */
+            border-radius: 35px; /* Border radius */
+            background: linear-gradient(to right, #FF18A4, #FAA21D); /* Gradient background */
+            
+        }
+        /* Hover effect */
+        .get-started:hover {
+            background-color: #303030; /* Darker green */
+        }
+        
+	</style>
+</head>
+
+<body>
+    <div data-aos="fade-down" data-aos-duration="700">
+        <div class="logo"></div>
+    </div>
+    
+
+    <nav class="nav">
+        <div class="ab" data-aos="fade-down" data-aos-duration="700"><div class="anim">About</div></div>
+        <div class="ab" data-aos="fade-down" data-aos-duration="900"><div class="anim">Best Sellers</div></div>
+        <div class="ab" data-aos="fade-down" data-aos-duration="1100"><div class="anim">FAQ</div></div>
+        <div class="ab" data-aos="fade-down" data-aos-duration="1300"><div class="anim">Contact Us</div></div>
+    </nav>
+    <div class ="register" data-aos="fade-down" data-aos-duration="1400">
+        <div class="anim">
+            Sign Up
+<!--img src="./img/register.png" alt="Icon" class="icon"-->
+        </div>
+    </div>
+
+    <img src="./img/Rectangle.png" class="transparent-box" >
+    <img src="./img/Rectangle.png" class="transparent-box2">
+    <h1 data-aos="zoom-out" data-aos-duration="1000">
+		<span class="first-text">Welcome To </span>
+		<span class="second-text"><br>Gadget </span>
+		<span class="second-text">Grid</span>
+	</h1>
+    <div class="custom-img">
+        <img src="./img/Ai1.png" data-aos="zoom-in" data-aos-duration="1400">
+    </div>
+    <div class="btnuptext">
+        <div  data-aos="fade-left" data-aos-duration="1100">Explore, Compare, Decide –<br> Your ultimate destination <br>for smart shopping.</div>
+    </div>
+        <button class="get-started">GET STARTED<img src="./img/RIGHTARROW.png" alt="Icon" class="icon"> </button>
+        <div class="stroke-layer"></div>
+
+
+        <!--SCROLL BAR CONTENT-->
+        <section class="container">
+            <div class="card__container swiper">
+               <div class="card__content">
+                  <div class="swiper-wrapper">
+                     <article class="card__article swiper-slide">
+                        <div class="card__image">
+                           <img src="assets/img/avatar-6.png" alt="image" class="card__img">
+                           <div class="card__shadow"></div>
+                        </div>
+         
+                        <div class="card__data">
+                           <h3 class="card__name">Kell Dawx</h3>
+                           <p class="card__description">
+                              Passionate about development and design, 
+                              I carry out projects at the request of users.
+                           </p>
+         
+                           <a href="#" class="card__button">View More</a>
+                        </div>
+                     </article>
+         
+                     <article class="card__article swiper-slide">
+                        <div class="card__image">2`
+                           <img src="assets/img/avatar-8.png" alt="image" class="card__img">
+                           <div class="card__shadow"></div>
+                        </div>
+         
+                        <div class="card__data">
+                           <h3 class="card__name">Lotw Fox</h3>
+                           <p class="card__description">
+                              Passionate about development and design, 
+                              I carry out projects at the request of users.
+                           </p>
+         
+                           <a href="#" class="card__button">View More</a>
+                        </div>
+                     </article>
+         
+                     <article class="card__article swiper-slide">
+                        <div class="card__image">
+                           <img src="assets/img/avatar-7.png" alt="image" class="card__img">
+                           <div class="card__shadow"></div>
+                        </div>
+         
+                        <div class="card__data">
+                           <h3 class="card__name">Sara Mit</h3>
+                           <p class="card__description">
+                              Passionate about development and design, 
+                              I carry out projects at the request of users.
+                           </p>
+         
+                           <a href="#" class="card__button">View More</a>
+                        </div>
+                     </article>
+         
+                     <article class="card__article swiper-slide">
+                        <div class="card__image">
+                           <img src="assets/img/avatar-9.png" alt="image" class="card__img">
+                           <div class="card__shadow"></div>
+                        </div>
+         
+                        <div class="card__data">
+                           <h3 class="card__name">Jenny Wert</h3>
+                           <p class="card__description">
+                              Passionate about development and design, 
+                              I carry out projects at the request of users.
+                           </p>
+         
+                           <a href="#" class="card__button">View More</a>
+                        </div>
+                     </article>
+   
+                     <article class="card__article swiper-slide">
+                        <div class="card__image">
+                           <img src="assets/img/avatar-5.png" alt="image" class="card__img">
+                           <div class="card__shadow"></div>
+                        </div>
+         
+                        <div class="card__data">
+                           <h3 class="card__name">Lexa Kin</h3>
+                           <p class="card__description">
+                              Passionate about development and design, 
+                              I carry out projects at the request of users.
+                           </p>
+         
+                           <a href="#" class="card__button">View More</a>
+                        </div>
+                     </article>
+                  </div>
+               </div>
+   
+               <!-- Navigation buttons -->
+               <div class="swiper-button-next">
+                  <i class="ri-arrow-right-s-line"></i>
+               </div>
+               
+               <div class="swiper-button-prev">
+                  <i class="ri-arrow-left-s-line"></i>
+               </div>
+   
+               <!-- Pagination -->
+               <div class="swiper-pagination"></div>
+            </div>
+         </section>
+         
+         <!--=============== SWIPER JS ===============-->
+         <script src="assets/js/swiper-bundle.min.js"></script>
+   
+         <!--=============== MAIN JS ===============-->
+         <script src="assets/js/main.js"></script>
+    <script>/*npm install aos (TERMINAL)IS IMPORTANT*/
+        
+        AOS.init({
+            offset:1,
+            duration: 600,
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.refresh();
+        });
+        window.addEventListener('load', AOS.refresh);
+    </script>
+</body>
+</html>
